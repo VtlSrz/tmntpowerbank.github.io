@@ -3,102 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Інструкція: Power Bank TMNT</title>
+    <title>Інструкція: Custom Power Bank TMNT Edition</title>
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: #111;
-            color: #f1f1f1;
+        body, html { 
+            margin: 0; 
+            padding: 0; 
+            height: 100%; 
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            //background-color: #050505; 
+            color: #f8f9fa; 
         }
-        
-        /* Налаштування фону: блюр, затемнення, контраст */
-        .bg-image {
-            background-image: url('https://i.postimg.cc/VLfCzhvv/bg.jpg'); 
-            height: 100%;
-            background-position: center;
-            background-size: cover;
-            position: fixed;
-            width: 100%;
-            z-index: -1;
-            filter: blur(8px) brightness(0.35) contrast(1.2);
-            transform: scale(1.05); /* Ховає білі краї від розмиття */
+        .bg-image { 
+            background-image: url('bg.jpg'); 
+            height: 100%; 
+            background-position: center; 
+            background-size: cover; 
+            position: fixed; 
+            width: 100%; 
+            z-index: -1; 
+            filter: blur(22px) brightness(0.65) contrast(1.5); 
+            transform: scale(1.1); 
         }
-
-        /* Контейнер для тексту */
-        .content {
-            position: relative;
-            z-index: 1;
-            max-width: 450px;
-            margin: 0 auto;
-            padding: 30px 20px;
+        .content { 
+            position: relative; 
+            z-index: 1; 
+            max-width: 650px; 
+            margin: 0 auto; 
+            padding: 40px 20px; 
         }
-
+        .card { 
+            background: rgba(20, 20, 20, 0.75); 
+            border: 1px solid rgba(74, 222, 128, 0.25); 
+            border-radius: 12px; 
+            padding: 25px; 
+            margin-bottom: 25px; 
+            backdrop-filter: blur(6px); 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6); 
+        }
         h1 { 
             text-align: center; 
-            color: #4ade80; /* Зелений колір під стиль черепашок */
-            margin-bottom: 5px;
-            font-size: 28px;
+            color: #4ade80; 
+            margin-top: 0; 
+            font-size: 32px; 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
         }
-        
-        .subtitle {
-            text-align: center;
-            color: #9ca3af;
-            font-size: 14px;
-            margin-bottom: 30px;
-        }
-
-        h3 { 
+        h2 { 
             color: #2dd4bf; 
-            margin-top: 25px; 
-            border-bottom: 1px solid #444; 
-            padding-bottom: 5px;
-            font-size: 18px;
+            font-size: 20px; 
+            margin-top: 0; 
+            border-bottom: 1px solid rgba(45, 212, 191, 0.3); 
+            padding-bottom: 10px; 
         }
-
+        h3 { 
+            color: #4ade80; 
+            font-size: 17px; 
+            margin-bottom: 8px; 
+            margin-top: 20px;
+        }
         p, li { 
-            line-height: 1.6; 
+            line-height: 1.7; 
             font-size: 15px; 
+            color: #e5e7eb; 
+            margin-bottom: 10px; 
         }
-
         ul { 
             padding-left: 20px; 
+            margin-top: 5px; 
         }
-
         .highlight { 
             color: #fbbf24; 
             font-weight: bold; 
         }
+        .danger { 
+            color: #ef4444; 
+            font-weight: bold; 
+        }
+        .footer { 
+            text-align: center; 
+            color: #6b7280; 
+            font-size: 12px; 
+            margin-top: 40px; 
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
-    <!-- Фонове зображення -->
     <div class="bg-image"></div>
-
-    <!-- Текст інструкції -->
     <div class="content">
-        <h1>Custom Power Bank</h1>
-        <div class="subtitle">4S 16.8V | PD 65W | Dual Module</div>
+        <div class="card" style="text-align: center;">
+            <h1>Power Bank</h1>
+            <p style="color: #9ca3af; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0;">TMNT Edition | 4S 16.8V | PD 65W</p>
+        </div>
 
-        <h3>🔌 Призначення портів</h3>
-        <ul>
-            <li><span class="highlight">Порт OUT:</span> Швидка віддача (до 65W). Для зарядки смартфонів, ноутбуків та живлення сторонньої електроніки.</li>
-            <li><span class="highlight">Порт IN:</span> Тільки для заряджання павербанка! Потужність ~15W, тому найкраще залишати підключеним на ніч.</li>
-        </ul>
+        <div class="card">
+            <h2>🔋 Технічні характеристики</h2>
+            <ul>
+                <li><strong>Акумуляторний блок:</strong> 4S збірка літій-полімерних (Li-Po) елементів (20000mAh, 12-16.8V).</li>
+                <li><strong>Система захисту:</strong> Вбудована BMS плата з контролем глибокого розряду та короткого замикання.</li>
+                <li><strong>Модуль віддачі (OUT):</strong> Понижуючий DC-DC SW3518 (до 65W, підтримка Power Delivery 3.0, Quick Charge 4.0).</li>
+                <li><strong>Модуль прийому (IN):</strong> Підвищувальний (Boost) конвертер для заряджання від стандартних 5V адаптерів.</li>
+            </ul>
+        </div>
 
-        <h3>❌ Чого робити не варто</h3>
-        <ul>
-            <li><strong>Плутати порти:</strong> Порт IN не віддає енергію, а OUT — не приймає її для зарядки акумуляторів.</li>
-            <li><strong>Глибокий розряд:</strong> Не залишайте пристрій розрядженим на довгі місяці, щоб плата BMS не заблокувала комірки.</li>
-        </ul>
+        <div class="card">
+            <h2>🔌 Призначення портів</h2>
+            <p>Ваша збірка використовує архітектуру розділених портів. Контролери заряду та розряду фізично не пов'язані, тому напрямки струму суворо розмежовані.</p>
+            
+            <h3>🟩 Порт OUT (Віддача енергії)</h3>
+            <ul>
+                <li>Призначений <span class="highlight">виключно для заряджання ваших гаджетів</span> та живлення сторонньої електроніки.</li>
+                <li>Забезпечує автоматичне узгодження напруги (5V, 9V, 12V, 15V, 20V) залежно від підключеного пристрою.</li>
+                <li><strong>Що можна підключати:</strong> Смартфони, навушники, планшети, ноутбуки, а також саморобні електронні пристрої через PD-тригери (наприклад, для живлення мікроконтролерів).</li>
+            </ul>
+            
+            <h3>🟨 Порт IN (Заряджання акумулятора)</h3>
+            <ul>
+                <li>Призначений <span class="highlight">виключно для заряджання самого павербанка</span> від мережевого адаптера.</li>
+                <li>Плата забирає 5V з адаптера і перетворює їх на 16.8V для акумуляторів. Цей процес енергозатратний, тому потужність заряджання обмежується 10–15 Вт.</li>
+                <li><strong>Важливо:</strong> Заряджання такого масивного акумулятора займає тривалий час. Найкраща стратегія — залишати його на зарядці на ніч.</li>
+            </ul>
+        </div>
 
-        <h3>⚠️ Техніка безпеки</h3>
-        <ul>
-            <li>Використовуйте тільки якісні кабелі Type-C (з маркуванням 5A або 100W) для роз'єму OUT.</li>
-            <li>Під час віддачі високої потужності плата всередині гріється. Забезпечте вільний доступ повітря до вентиляційних отворів.</li>
-        </ul>
+        <div class="card">
+            <h2>⚠️ Детальна техніка безпеки</h2>
+            <p>Цей павербанк є потужним нетиповим пристроєм, всередині якого протікають струми високої напруги (16.8V). Суворе дотримання правил збереже і гаджети, і вас.</p>
+            
+            <h3>🔥 Температурний режим та охолодження</h3>
+            <ul>
+                <li>Під час тривалої роботи на максимальній потужності (наприклад, заряджання ноутбука на 65W) внутрішні компоненти (особливо силовий дросель та мікросхеми SW3518) <strong>суттєво нагріваються</strong>.</li>
+                <li><span class="danger">Категорично заборонено</span> накривати павербанк тканиною, використовувати його під подушкою або в тісних закритих кишенях під час роботи під навантаженням.</li>
+                <li>Матеріал корпусу може розм'якшитися при екстремальному перегріві понад 70-80°C. Якщо корпус стає обпікаюче гарячим — зупиніть заряджання і дайте йому охолонути.</li>
+            </ul>
+
+            <h3>⚡ Вимоги до кабелів</h3>
+            <ul>
+                <li>Для порту OUT завжди використовуйте якісні товсті кабелі з маркуванням <strong>5A або 100W</strong> (бажано з вбудованим E-Marker чипом).</li>
+                <li>Дешеві тонкі дроти при струмах 3-5 Ампер можуть розплавитися біля конекторів і спричинити зовнішнє коротке замикання.</li>
+            </ul>
+
+            <h3>💧 Механічні пошкодження та волога</h3>
+            <ul>
+                <li>Пристрій не герметичний. Потрапляння будь-якої рідини через порти чи отвори викличе миттєве коротке замикання акумуляторної збірки на 16.8V.</li>
+                <li>Оберігайте пристрій від сильних ударів. Полімерні (Li-Po) пакети всередині дуже чутливі до фізичного пробиття та можуть спалахнути при сильній деформації банок.</li>
+                <li>Ніколи не вставляйте металеві предмети у щілини — ви ризикуєте замкнути силові контакти на платах.</li>
+            </ul>
+
+            <h3>🔋 Запобігання глибокому розряду</h3>
+            <ul>
+                <li>Незважаючи на надійну плату захисту (BMS), <span class="highlight">ніколи не залишайте павербанк розрядженим "в нуль" на довгі тижні чи місяці</span> (наприклад, у машині або гаражі).</li>
+                <li>Тривалий час у розрядженому стані призведе до того, що напруга хоча б однієї банки впаде до критичного мінімуму. BMS заблокує збірку назавжди, і вам доведеться знову її розбирати для ручного балансування (як ви це вже робили).</li>
+                <li>Якщо плануєте відкласти павербанк, зберігайте його зарядженим приблизно на 50-70%.</li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+            Зібрано власноруч. TMNT Custom Build © 2026
+        </div>
     </div>
 </body>
 </html>
