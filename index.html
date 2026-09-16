@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Інструкція: Power Bank TMNT</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #111;
+            color: #f1f1f1;
+        }
+        
+        /* Налаштування фону: блюр, затемнення, контраст */
+        .bg-image {
+            background-image: url('bg.jpg'); 
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            position: fixed;
+            width: 100%;
+            z-index: -1;
+            filter: blur(8px) brightness(0.35) contrast(1.2);
+            transform: scale(1.05); /* Ховає білі краї від розмиття */
+        }
+
+        /* Контейнер для тексту */
+        .content {
+            position: relative;
+            z-index: 1;
+            max-width: 450px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        h1 { 
+            text-align: center; 
+            color: #4ade80; /* Зелений колір під стиль черепашок */
+            margin-bottom: 5px;
+            font-size: 28px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #9ca3af;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        h3 { 
+            color: #2dd4bf; 
+            margin-top: 25px; 
+            border-bottom: 1px solid #444; 
+            padding-bottom: 5px;
+            font-size: 18px;
+        }
+
+        p, li { 
+            line-height: 1.6; 
+            font-size: 15px; 
+        }
+
+        ul { 
+            padding-left: 20px; 
+        }
+
+        .highlight { 
+            color: #fbbf24; 
+            font-weight: bold; 
+        }
+    </style>
+</head>
+<body>
+    <!-- Фонове зображення -->
+    <div class="bg-image"></div>
+
+    <!-- Текст інструкції -->
+    <div class="content">
+        <h1>Custom Power Bank</h1>
+        <div class="subtitle">4S 16.8V | PD 65W | Dual Module</div>
+
+        <h3>🔌 Призначення портів</h3>
+        <ul>
+            <li><span class="highlight">Порт OUT:</span> Швидка віддача (до 65W). Для зарядки смартфонів, ноутбуків та живлення сторонньої електроніки.</li>
+            <li><span class="highlight">Порт IN:</span> Тільки для заряджання павербанка! Потужність ~15W, тому найкраще залишати підключеним на ніч.</li>
+        </ul>
+
+        <h3>❌ Чого робити не варто</h3>
+        <ul>
+            <li><strong>Плутати порти:</strong> Порт IN не віддає енергію, а OUT — не приймає її для зарядки акумуляторів.</li>
+            <li><strong>Глибокий розряд:</strong> Не залишайте пристрій розрядженим на довгі місяці, щоб плата BMS не заблокувала комірки.</li>
+        </ul>
+
+        <h3>⚠️ Техніка безпеки</h3>
+        <ul>
+            <li>Використовуйте тільки якісні кабелі Type-C (з маркуванням 5A або 100W) для роз'єму OUT.</li>
+            <li>Під час віддачі високої потужності плата всередині гріється. Забезпечте вільний доступ повітря до вентиляційних отворів.</li>
+        </ul>
+    </div>
+</body>
+</html>
